@@ -96,17 +96,7 @@ footer{
 }
 
 /* --- Modern tech touch --- */
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0b1020;
-    --text:#e5e7eb;
-    --muted:#9ca3af;
-    --line:#1f2937;
-    --link:#60a5fa;
-    --card:#0f172a;
-  }
-  nav a{ background: rgba(255,255,255,0.03); }
-}
+
 
 a{
   text-decoration:none;

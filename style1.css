@@ -1,11 +1,12 @@
 :root{
   --bg:#ffffff;
-  --text:#111827;
-  --muted:#6b7280;
+  --text:#0f172a;
+  --muted:#64748b;
   --line:#e5e7eb;
   --link:#2563eb;
   --card:#f8fafc;
 }
+
 
 *{ box-sizing:border-box; }
 

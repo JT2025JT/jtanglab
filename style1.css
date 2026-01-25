@@ -117,4 +117,65 @@ a:hover{
 }
 
 nav a.active{
-  border-co
+  border-color: transparent;
+  background: linear-gradient(90deg, rgba(96,165,250,0.25), rgba(167,139,250,0.25));
+}
+
+/* ===========================
+   Full-width hero (fixed ratio + crop, no stretch)
+   Requires HTML:
+   <div class="hero hero--full"><img src="A.jpg" ...></div>
+   =========================== */
+
+.hero--full{
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: -6px;
+  margin-bottom: 34px;
+  overflow: hidden;
+
+  /* 固定横幅比例：推荐 21:9（你也可改 16/9 或 3/1） */
+  aspect-ratio: 21 / 9;
+}
+
+.hero--full img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 不拉伸，自动裁剪 */
+  object-position: 50% 40%;   /* 裁剪焦点：可调（上移一点更像横幅） */
+  display: block;
+}
+
+/* dark overlay to improve text readability */
+.hero--full::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+  pointer-events:none;
+}
+
+/* text on image */
+.hero--full::after{
+  content:"Quantum Materials & Devices";
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size: clamp(22px, 3.2vw, 44px);  /* 自适应字号 */
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.5);
+  white-space:nowrap;
+  pointer-events:none;
+}
+
+/* small screens: slightly taller banner so it doesn't feel too thin */
+@media (max-width: 768px){
+  .hero--full{
+    aspect-ratio: 16 / 9;     /* 手机上改成更“饱满”的比例 */
+  }
+}

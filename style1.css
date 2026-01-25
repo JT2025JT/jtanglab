@@ -106,10 +106,8 @@ a:hover{
 }
 
 .brand h1{
-  background: linear-gradient(90deg, #60a5fa, #a78bfa, #34d399);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #0f172a;   /* 接近正文的深灰 */
+  background: none;
 }
 
 .card{

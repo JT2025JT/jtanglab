@@ -138,7 +138,7 @@ footer{
   overflow: hidden;
 
   /* 横幅比例：你现在用 8/1 很矮，保留 */
-  aspect-ratio: 8 / 1;
+  aspect-ratio: 6 / 1;
 
   border-radius: 12px;
 }

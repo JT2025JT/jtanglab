@@ -132,7 +132,7 @@ nav a.active{
   overflow: hidden;
 
   /* 固定横幅比例：推荐 21:9（也可改 16/9 或 3/1） */
-  aspect-ratio: 8 / 1;
+  aspect-ratio: 6 / 1;
 
   border-radius: 12px;
 }

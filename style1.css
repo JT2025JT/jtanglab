@@ -185,3 +185,7 @@ footer{
     gap:12px;
   }
 }
+
+.justify {
+  text-align: justify;
+}

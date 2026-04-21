@@ -1,223 +1,41 @@
-:root{
-  --bg:#ffffff;
-  --text:#0f172a;
-  --muted:#64748b;
-  --line:#e5e7eb;
-  --link:#2563eb;
-  --card:#f8fafc;
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: #e5e7eb;
+  --link: #2563eb;
+  --accent: #0b4ea2;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  --radius: 14px;
 }
 
-*{ box-sizing:border-box; }
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  line-height:1.7;
+* {
+  box-sizing: border-box;
 }
 
-.container{
-  max-width:980px;
-  margin:0 auto;
-  padding:42px 18px 70px;
-}
-
-.header{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-/* Title:稳重深灰 */
-.brand h1{
-  margin:0;
-  font-size:34px;
-  letter-spacing:-0.02em;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
   color: var(--text);
-  background: none;
-}
-
-/* Subtitle:更学院官网风 */
-.brand .subtitle{
-  margin-top:4px;
-  color: var(--muted);
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform:none;
-}
-
-/* Nav:下划线风 */
-nav{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  font-weight:600;
-}
-
-nav a{
-  text-decoration:none;
-  color: var(--text);
-  padding:6px 4px;
-  border:none;
-  background:none;
-  position:relative;
-}
-
-nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:2px;
-  background: var(--text);
-  transition: width 0.25s ease;
-}
-
-nav a:hover::after{
-  width:100%;
-}
-
-nav a.active::after{
-  width:100%;
-}
-
-hr{
-  border:none;
-  border-top:1px solid var(--line);
-  margin:18px 0 22px;
-}
-
-.card{
-  border:1px solid var(--line);
-  background:var(--card);
-  border-radius:16px;
-  padding:16px 18px;
-  margin:14px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-a{
-  color:var(--link);
-  text-decoration:none;
-}
-
-a:hover{
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-h2{
-  margin:28px 0 10px;
-  font-size:20px;
-}
-
-ul,ol{
-  padding-left:18px;
-}
-
-footer{
-  margin-top:40px;
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* ===========================
-   Hero (fits container width)
-   HTML:
-   <div class="hero"><img src="A.jpg" ...></div>
-   =========================== */
-
-.hero{
-  position: relative;
-  width: 100%;
-  margin: 0 0 30px 0;
-  overflow: hidden;
-
-  /* 横幅比例：你现在用 8/1 很矮，保留 */
-  aspect-ratio: 6 / 1;
-
-  border-radius: 12px;
-}
-
-.hero img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* 不拉伸，自动裁剪 */
-  object-position: 50% 40%;   /* 裁剪焦点：可调 */
-  display: block;
-}
-
-/* dark overlay to improve text readability */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28));
-  pointer-events:none;
-}
-
-/* Hero text:更细、更学术 */
-.hero::after{
-  content:"Quantum Materials & Devices";
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  color:#fff;
-  font-size: clamp(16px, 2.4vw, 30px);
-  font-weight:400;
-  letter-spacing:0.12em;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
-  white-space:nowrap;
-  pointer-events:none;
-}
-
-/* Mobile tweaks */
-@media (max-width: 768px){
-  .hero{
-    aspect-ratio: 16 / 9;   /* 手机上避免过扁 */
-  }
-  nav{
-    gap:12px;
-  }
-}
-
-.justify {
-  text-align: justify;
-}
-
-.dir1-float-img{
-  float: right;                 /* 关键：浮到右边 */
-  width: 30%;                   /* 约 1/3 宽度 */
-  margin: 6px 0 12px 20px;      /* 左边留空给文字 */
-  border-radius: 10px;
-}
-
-.justify{
-  text-align: justify;
-}
-
-/* Mobile: 取消浮动，变成上图下文 */
-@media (max-width: 760px){
-  .dir1-float-img{
-    float: none;
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto 14px;
-    display: block;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
 }
 
 body {
-  margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #222;
-  background: #ffffff;
-  line-height: 1.7;
+  font-size: 16px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .container {
@@ -226,6 +44,10 @@ body {
   margin: 0 auto;
   padding: 24px 0 48px;
 }
+
+/* =========================
+   Header
+   ========================= */
 
 .header {
   display: flex;
@@ -239,12 +61,16 @@ body {
   margin: 0;
   font-size: 2.1rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
-.subtitle {
+.subtitle,
+.brand .subtitle {
   margin-top: 6px;
-  color: #666;
+  color: var(--muted);
   font-size: 1rem;
+  letter-spacing: 0.08em;
 }
 
 nav {
@@ -254,29 +80,111 @@ nav {
 }
 
 nav a {
-  text-decoration: none;
+  position: relative;
   color: #333;
   font-weight: 500;
-  padding-bottom: 4px;
+  padding: 6px 2px 8px;
+  text-decoration: none;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
 }
 
 nav a:hover,
 nav a.active {
-  color: #0b4ea2;
-  border-bottom: 2px solid #0b4ea2;
+  color: var(--accent);
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--line);
   margin: 20px 0 28px;
+}
+
+/* =========================
+   Hero banner
+   ========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0 0 30px;
+  overflow: hidden;
+  aspect-ratio: 6 / 1;
+  border-radius: 12px;
+  background: #f8fafc;
 }
 
 .hero img {
   width: 100%;
+  height: 100%;
   display: block;
-  border-radius: 12px;
   object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28));
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "Quantum Materials & Devices";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: clamp(16px, 2.4vw, 30px);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+h2 {
+  margin: 28px 0 10px;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ul,
+ol {
+  padding-left: 18px;
+}
+
+.justify {
+  text-align: justify;
 }
 
 .intro {
@@ -284,10 +192,27 @@ hr {
 }
 
 .intro p {
+  margin: 0;
   font-size: 1.08rem;
   color: #222;
-  margin: 0;
 }
+
+/* =========================
+   Generic card
+   ========================= */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   Home page layout
+   ========================= */
 
 .home-grid {
   display: grid;
@@ -301,8 +226,6 @@ hr {
 .info-card h2 {
   margin-top: 0;
   margin-bottom: 18px;
-  font-size: 1.5rem;
-  color: #111;
 }
 
 .news-list {
@@ -313,15 +236,15 @@ hr {
 
 .news-list li {
   padding: 16px 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--line);
 }
 
 .news-date {
   display: inline-block;
   min-width: 88px;
-  font-weight: 700;
-  color: #0b4ea2;
   vertical-align: top;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .news-text {
@@ -331,11 +254,11 @@ hr {
 }
 
 .info-card {
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 14px;
-  padding: 24px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
 }
 
 .card-block + .card-block {
@@ -345,9 +268,7 @@ hr {
 }
 
 .card-block h3 {
-  margin: 0 0 12px;
-  font-size: 1.1rem;
-  color: #0b4ea2;
+  color: var(--accent);
 }
 
 .card-block p {
@@ -356,13 +277,42 @@ hr {
 }
 
 .card-block a {
-  color: #0b4ea2;
-  text-decoration: none;
+  color: var(--accent);
 }
 
-.card-block a:hover {
-  text-decoration: underline;
+/* =========================
+   Research page image
+   ========================= */
+
+.dir1-float-img {
+  float: right;
+  width: 30%;
+  margin: 6px 0 12px 20px;
+  border-radius: 10px;
+  background: #fff;
 }
+
+/* Optional white panel for figures or highlighted sections */
+.figure-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =========================
+   Responsive
+   ========================= */
 
 @media (max-width: 900px) {
   .home-grid {
@@ -377,5 +327,23 @@ hr {
 
   .news-date {
     margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: 16 / 9;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .dir1-float-img {
+    float: none;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 14px;
+    display: block;
   }
 }

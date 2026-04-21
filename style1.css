@@ -291,7 +291,7 @@ hr {
 
 .home-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.6fr 1.4fr;
   gap: 32px;
   align-items: start;
   margin-top: 28px;

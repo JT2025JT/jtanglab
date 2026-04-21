@@ -211,3 +211,171 @@ footer{
     display: block;
   }
 }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  background: #fafafa;
+  line-height: 1.7;
+}
+
+.container {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #666;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #0b4ea2;
+  border-bottom: 2px solid #0b4ea2;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0 28px;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.intro {
+  margin: 28px 0 24px;
+}
+
+.intro p {
+  font-size: 1.08rem;
+  color: #222;
+  margin: 0;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.news-section h2,
+.info-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.news-date {
+  display: inline-block;
+  min-width: 88px;
+  font-weight: 700;
+  color: #0b4ea2;
+  vertical-align: top;
+}
+
+.news-text {
+  display: inline-block;
+  width: calc(100% - 96px);
+  color: #222;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-block + .card-block {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.card-block h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: #0b4ea2;
+}
+
+.card-block p {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card-block a {
+  color: #0b4ea2;
+  text-decoration: none;
+}
+
+.card-block a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-date,
+  .news-text {
+    display: block;
+    width: 100%;
+  }
+
+  .news-date {
+    margin-bottom: 4px;
+  }
+}

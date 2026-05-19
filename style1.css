@@ -347,11 +347,3 @@ footer {
     display: block;
   }
 }
-
-.news-image {
-  display: block;
-  max-width: 100%;
-  width: 500px;
-  margin-top: 12px;
-  border-radius: 8px;
-}

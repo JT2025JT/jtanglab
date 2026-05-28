@@ -292,6 +292,8 @@ ol {
   background: #fff;
 }
 
+
+
 /* Optional white panel for figures or highlighted sections */
 .figure-panel {
   background: #fff;
@@ -358,16 +360,6 @@ footer {
   max-width: 90%;
 }
 
-
-
-
-.dir1-float-img {
-  float: right;
-  margin-left: 16px;
-  margin-top: 6px;
-  width: 180px;   /* 默认图片尺寸 */
-  height: auto;   /* 保持比例 */
-}
 
 .natmater-news-img {
   width: 240px;   /* 只放大第一条 news 的图 */

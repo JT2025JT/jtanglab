@@ -325,6 +325,8 @@ footer {
     width: 100%;
   }
 
+  
+
   .news-date {
     margin-bottom: 4px;
   }
@@ -339,6 +341,9 @@ footer {
     gap: 12px;
   }
 
+
+
+  
   .dir1-float-img {
     float: none;
     width: 100%;
@@ -351,4 +356,20 @@ footer {
 .prx-news-img {
   width: 300px;
   max-width: 90%;
+}
+
+
+
+
+.dir1-float-img {
+  float: right;
+  margin-left: 16px;
+  margin-top: 6px;
+  width: 180px;   /* 默认图片尺寸 */
+  height: auto;   /* 保持比例 */
+}
+
+.natmater-news-img {
+  width: 240px;   /* 只放大第一条 news 的图 */
+  height: auto;   /* 保持比例，不拉伸 */
 }

@@ -370,6 +370,6 @@ footer {
 }
 
 .natmater-news-img {
-  width: 240px;   /* 只放大第一条 news 的图 */
+  width: 440px;   /* 只放大第一条 news 的图 */
   height: auto;   /* 保持比例，不拉伸 */
 }

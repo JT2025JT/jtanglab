@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Facilities - Jian Tang Lab</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="brand">
+      <h1>Jian Tang Lab</h1>
+      <div class="subtitle">Quantum Materials and Devices</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="research.html">Research</a>
+      <a href="people.html">Members</a>
+      <a href="people.html">Facilities</a>
+      <a href="publications.html">Publications</a>
+      <a href="JoinUs.html">Join Us</a>
+    </nav>
+  </div>
+
+  <hr>
+
+  <h3>1. Topological quantum materials</h3>
+
+  <div class="dir1-wrap">
+
+    <img src="direction0.jpeg" alt="Direction 1 schematic" class="dir1-float-img">
+
+    <p class="justify">
+      We explore the frontier where topology intersects with electron correlations in low-dimensional quantum materials and van der Waals heterostructures. 
+      By tuning electrostatic gating, layer stacking, twist angle, and proximity to ferromagnets or superconductors, we create and probe new quantum states arising from the interplay of symmetry, topology, electron interactions, lattice instabilities, and electron-phonon coupling, etc. 
+      Our goal is to uncover novel topological and correlated phases and to advance the understanding and control of emergent phenomena in a series of new quantum materials.
+    </p>
+
+    <p class="justify">
+      (1) For instance, we recently discovered a <em>dual quantum spin Hall insulator</em> in monolayer TaIrTe<sub>4</sub>
+      (<a href="https://www.nature.com/articles/s41586-024-07211-8" target="_blank" rel="noopener noreferrer"><em>Nature</em> <b>628</b>, 515, 2024</a>),
+      arising from the interplay of its single-particle topology and density-tuned electron correlations close to low-energy van Hove singularities. The discovery of the dual QSH insulator introduces a new method for creating topological flat minibands through CDW superlattices, which offer a promising platform for exploring time-reversal-symmetric fractional phases. Moreover, we further uncovered the
+      <em>interaction-driven topological phase transition</em>
+      (<a href="https://journals.aps.org/prx/accepted/10.1103/456g-q7bd" target="_blank" rel="noopener noreferrer"><em>Phys. Rev. X</em>, 2026</a>)
+      from a quantum spin Hall insulator to a trivial insulator, a higher-order topological insulator, and a metallic phase. 
+    </p>
+
+    <!-- Wide image between Direction 1 and Direction 2 -->
+    <div style="text-align: center; margin: 10px 0;">
+      <img src="direction1.jpeg" alt="Wide schematic for Direction 1"
+           style="width: 100%; max-width: 100%; height: auto;">
+    </div>
+
+
+</div>
+
+</body>
+</html>

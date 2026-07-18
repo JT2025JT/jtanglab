@@ -514,3 +514,88 @@ footer {
   transform: none;
   box-shadow: none;
 }
+
+/* Graduate students: two members per row */
+.graduate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 60px;
+  row-gap: 40px;
+}
+
+/* Each student's photo and information */
+.graduate-grid .person-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+
+  min-width: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Disable card hover effect */
+.graduate-grid .person-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Unified photo size */
+.graduate-grid .person-photo {
+  width: 180px !important;
+  height: 220px !important;
+  max-width: 180px !important;
+
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+
+  border-radius: 5px;
+}
+
+/* Student information */
+.graduate-grid .person-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.graduate-grid .person-info h3 {
+  margin: 4px 0 18px;
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.graduate-grid .person-position {
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.graduate-grid .person-description {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* One student per row on smaller screens */
+@media (max-width: 900px) {
+  .graduate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 560px) {
+  .graduate-grid .person-card {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .graduate-grid .person-photo {
+    width: 160px !important;
+    height: 195px !important;
+    max-width: 160px !important;
+  }
+}

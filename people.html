@@ -1,10 +1,13 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>People - Jian Tang Lab</title>
   <link rel="stylesheet" href="style1.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -27,25 +30,107 @@
 
   <hr>
 
-  <div class="card">
-    <h2>Jian Tang</h2>
-    <p>Dr. Jian Tang</p>
-  </div>
+  <!-- Principal Investigator -->
+  <section class="people-section">
+    <h2>Principal Investigator</h2>
 
-  <div class="card">
+    <div class="people-grid">
+
+      <div class="person-card pi-card">
+        <img
+          class="person-photo"
+          src="JianTang.jpg"
+          alt="Jian Tang"
+        >
+
+        <div class="person-info">
+          <h3>Jian Tang</h3>
+          <p class="person-position">
+            Principal Investigator
+          </p>
+
+          <p class="person-description">
+            Tenure-track Assistant Professor<br>
+            School of Physics<br>
+            Zhejiang University
+          </p>
+
+          <p class="person-links">
+            <a href="mailto:jiantang@zju.edu.cn">Email</a>
+            <span>·</span>
+            <a href="publications.html">Publications</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Students -->
+  <section class="people-section">
     <h2>Students</h2>
-    <ul>
-      <li>PhD Student 1</li>
-      <li>PhD Student 2</li>
-    </ul>
-  </div>
 
-  <div class="card">
+    <div class="people-grid">
+
+      <div class="person-card">
+        <img
+          class="person-photo"
+          src="images/student1.jpg"
+          alt="PhD Student 1"
+        >
+
+        <div class="person-info">
+          <h3>PhD Student 1</h3>
+          <p class="person-position">Ph.D. Student</p>
+          <p class="person-description">
+            Research interests: quantum transport and low-dimensional materials.
+          </p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <img
+          class="person-photo"
+          src="images/student2.jpg"
+          alt="PhD Student 2"
+        >
+
+        <div class="person-info">
+          <h3>PhD Student 2</h3>
+          <p class="person-position">Ph.D. Student</p>
+          <p class="person-description">
+            Research interests: two-dimensional devices and electronic correlations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Alumni -->
+  <section class="people-section">
     <h2>Alumni</h2>
-    <ul>
-      <li>Former member 1</li>
-    </ul>
-  </div>
+
+    <div class="people-grid">
+
+      <div class="person-card alumni-card">
+        <img
+          class="person-photo"
+          src="images/former-member1.jpg"
+          alt="Former Member 1"
+        >
+
+        <div class="person-info">
+          <h3>Former Member 1</h3>
+          <p class="person-position">Former Research Assistant</p>
+          <p class="person-description">
+            Current position: Institution or company.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 </div>
 

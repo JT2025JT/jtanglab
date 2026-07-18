@@ -472,3 +472,17 @@ footer {
     height: 200px;
   }
 }
+
+
+.person-card img.person-photo {
+  width: 180px !important;
+  height: 220px !important;
+  max-width: 180px !important;
+
+  object-fit: cover;
+  object-position: center top;
+
+  display: block;
+  flex-shrink: 0;
+  border-radius: 4px;
+}

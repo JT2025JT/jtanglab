@@ -365,3 +365,110 @@ footer {
   width: 240px;   /* 只放大第一条 news 的图 */
   height: auto;   /* 保持比例，不拉伸 */
 }
+
+
+
+/* =========================
+   People page
+   ========================= */
+
+.people-section {
+  margin: 40px 0;
+}
+
+.people-section > h2 {
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.person-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 22px;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.person-photo {
+  width: 130px;
+  height: 160px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.person-info h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+.person-position {
+  margin: 0 0 12px;
+  color: #555555;
+  font-weight: 600;
+}
+
+.person-description {
+  margin: 0;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.person-links {
+  margin-top: 14px;
+}
+
+.person-links a {
+  color: #1d5f91;
+  text-decoration: none;
+}
+
+.person-links a:hover {
+  text-decoration: underline;
+}
+
+.person-links span {
+  margin: 0 7px;
+  color: #999999;
+}
+
+/* PI card occupies the full row */
+.pi-card {
+  max-width: 650px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .person-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .person-photo {
+    width: 160px;
+    height: 200px;
+  }
+}

@@ -486,3 +486,18 @@ footer {
   flex-shrink: 0;
   border-radius: 4px;
 }
+
+/* Remove the outer frame of the PI profile */
+.pi-card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Remove hover animation and shadow */
+.pi-card:hover {
+  transform: none;
+  box-shadow: none;
+}
